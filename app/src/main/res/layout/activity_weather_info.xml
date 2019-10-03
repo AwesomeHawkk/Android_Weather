@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:textAlignment="center">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/weatherLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/one_d" />
+
+        <TextView
+            android:id="@+id/WI_cityName_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CityName"
+            android:textAlignment="center"
+            android:textColorHighlight="@color/colorAccent"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/WI_info_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descrip"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/WI_temperature_textView"
+            android:layout_width="match_parent"
+            android:layout_height="133dp"
+            android:text="Temper"
+            android:textAlignment="center"
+            android:textSize="50sp" />
+
+    </LinearLayout>
+
+<!--Start wind and Humidity-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="18dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/black" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="202dp"
+                android:layout_height="wrap_content"
+                android:text="Wind"
+                android:textAlignment="center" />
+
+
+            <TextView
+                android:layout_width="202dp"
+                android:layout_height="wrap_content"
+                android:text="Humidity"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/windHumidityLayout"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/textViewWind"
+                android:layout_width="202dp"
+                android:layout_height="match_parent"
+                android:text="WindText"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/textViewHunidity"
+                android:layout_width="202dp"
+                android:layout_height="match_parent"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:text="HumidityText"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+<!--End Wind and Humidity-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="18dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/black" />
+
+<!--Start Sunrise and Sunset-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="202dp"
+                android:layout_height="wrap_content"
+                android:text="Sunrise"
+                android:textAlignment="center" />
+
+
+            <TextView
+                android:layout_width="202dp"
+                android:layout_height="wrap_content"
+                android:text="Sunset"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/sunriseSunsetLayout"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/textViewSunrise"
+                android:layout_width="202dp"
+                android:layout_height="match_parent"
+                android:text="SunriseText"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/textViewSunset"
+                android:layout_width="202dp"
+                android:layout_height="match_parent"
+                android:text="SunsetText"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black" />
+
+    </LinearLayout>
+<!--End Sunrise and Sunset-->
+
+</LinearLayout>
