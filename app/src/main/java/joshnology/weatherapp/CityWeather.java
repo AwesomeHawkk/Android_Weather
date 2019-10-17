@@ -1,14 +1,17 @@
 package joshnology.weatherapp;
 
+import android.os.Parcelable;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.Date;
 import java.io.Serializable;
 import java.util.Calendar;
+import android.os.Parcelable;
+import android.os.Parcel;
 
-
-class CityWeather implements Serializable{
+class CityWeather implements Serializable {
 
     private String cityName;
     private String icon;
@@ -105,6 +108,7 @@ class CityWeather implements Serializable{
         this.sunset = sunset;
     }
 
+
     CityWeather parseJSON(JSONObject cityDetails){
          CityWeather cityWeather = new CityWeather();
 
@@ -189,5 +193,7 @@ class CityWeather implements Serializable{
 
          return calendar.getTime().toString().substring(10, 16);
     }
+
+
 
 }
