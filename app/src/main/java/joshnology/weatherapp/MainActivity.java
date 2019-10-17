@@ -13,6 +13,7 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import org.json.*;
+import android.os.Parcelable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,11 +25,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+       final CityWeatherCollection cityWeatherCollection = new CityWeatherCollection(this);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+
+                List<CityWeather> cityWeathers = new ArrayList<>();
+                cityWeathers = cityWeatherCollection.getCityWeathers();
                 Intent homeIntent = new Intent(MainActivity.this,WeatherHome.class);
+
+//                homeIntent.putExtra("weather", cityWeathers);
                 startActivity(homeIntent);
                 finish();
 
